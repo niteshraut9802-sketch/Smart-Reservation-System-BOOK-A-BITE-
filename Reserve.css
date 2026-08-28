@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0a1410;
+    color: #f4ead8;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 70px;
+    border-bottom: 1px solid rgba(201, 169, 89, 0.2);
+    background: #0d1f18;
+}
+
+.logo {
+    font-size: 26px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: #c9a959;
+}
+
+.logo span {
+    color: #d89b3c;
+}
+
+.back-btn {
+    color: #f4ead8;
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid rgba(216, 155, 60, 0.4);
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(216, 155, 60, 0.15);
+    border-color: #d89b3c;
+}
+
+/* PAGE HEADING */
+.reservation-page {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 70px 30px 100px;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.page-heading p {
+    color: #c9a959;
+    letter-spacing: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.page-heading h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 46px;
+    color: #f4ead8;
+    margin-bottom: 14px;
+}
+
+.page-heading span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 17px;
+}
+
+/* MESSAGES */
+.error-message {
+    background: rgba(212, 67, 67, 0.15);
+    border: 1px solid rgba(212, 67, 67, 0.5);
+    color: #f28b8b;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.success-message {
+    background: rgba(15, 92, 63, 0.25);
+    border: 1px solid rgba(15, 92, 63, 0.6);
+    color: #7fe0b0;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* EMAIL PREVIEW */
+.email-preview {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    background: #0d1f18;
+    border: 1px solid rgba(201, 169, 89, 0.35);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.email-preview-header {
+    background: rgba(216, 155, 60, 0.15);
+    padding: 14px 20px;
+    color: #d89b3c;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(201, 169, 89, 0.25);
+}
+
+.email-preview-body {
+    padding: 20px 24px;
+    color: #f4ead8;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.email-preview-body hr {
+    border: none;
+    border-top: 1px solid rgba(201, 169, 89, 0.2);
+    margin: 12px 0;
+}
+
+.email-preview-body ul {
+    margin: 10px 0 10px 20px;
+}
+
+.email-preview-body li {
+    margin-bottom: 4px;
+}
+
+/* FORM SECTIONS */
+.section {
+    background: rgba(15, 92, 63, 0.1);
+    border: 1px solid rgba(201, 169, 89, 0.18);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 24px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.section-heading span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: rgba(201, 169, 89, 0.4);
+    font-weight: 600;
+}
+
+.section-heading h2 {
+    color: #f4ead8;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.section-heading p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+/* INPUT GRID */
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-box label {
+    color: #c9a959;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.input-box input,
+.input-box select {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(201, 169, 89, 0.25);
+    background: #0a1410;
+    color: #f4ead8;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: #d89b3c;
+}
+
+.input-box input[readonly] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* DATE INPUT CALENDAR ICON FIX — golden tint */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(70%) sepia(70%) saturate(500%) hue-rotate(360deg) brightness(95%);
+    cursor: pointer;
+}
+
+/* CHOICE GRID (seating) */
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.choice-card {
+    display: block;
+    cursor: pointer;
+}
+
+.choice-card input {
+    display: none;
+}
+
+.choice-card div {
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(201, 169, 89, 0.2);
+    background: rgba(10, 20, 16, 0.5);
+    transition: 0.3s;
+}
+
+.choice-card strong {
+    display: block;
+    color: #f4ead8;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.choice-card small {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 13px;
+}
+
+.choice-card input:checked + div {
+    border-color: #d89b3c;
+    background: rgba(216, 155, 60, 0.12);
+}
+
+/* NO SEATING MESSAGE */
+#no-seating-msg {
+    margin-bottom: 0;
+}
+
+/* TABLE GRID */
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.table {
+    display: block;
+    cursor: pointer;
+}
+
+.table input {
+    display: none;
+}
+
+.table div {
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(201, 169, 89, 0.2);
+    background: rgba(10, 20, 16, 0.5);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.table strong {
+    display: block;
+    color: #f4ead8;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.table small {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 13px;
+}
+
+.table input:checked + div {
+    border-color: #d89b3c;
+    background: rgba(216, 155, 60, 0.12);
+}
+
+/* OCCASION GRID */
+.occasion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.occasion-grid label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(201, 169, 89, 0.2);
+    background: rgba(10, 20, 16, 0.5);
+    cursor: pointer;
+    transition: 0.3s;
+    color: #f4ead8;
+    font-size: 14px;
+}
+
+.occasion-grid input {
+    accent-color: #d89b3c;
+}
+
+.occasion-grid label:has(input:checked) {
+    border-color: #d89b3c;
+    background: rgba(216, 155, 60, 0.12);
+}
+
+/* PREORDER */
+.preorder {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.preorder p {
+    color: #f4ead8;
+    font-size: 14px;
+}
+
+.preorder label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #f4ead8;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.preorder input {
+    accent-color: #d89b3c;
+}
+
+/* FOOD LIST */
+.food-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.food {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: rgba(10, 20, 16, 0.5);
+    border: 1px solid rgba(201, 169, 89, 0.15);
+}
+
+.food-img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.food-info {
+    flex: 1;
+}
+
+.food strong {
+    color: #f4ead8;
+    font-size: 15px;
+}
+
+.food small {
+    color: #c9a959;
+    font-size: 13px;
+    margin-left: 6px;
+}
+
+.food input {
+    width: 60px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(201, 169, 89, 0.25);
+    background: #0a1410;
+    color: #f4ead8;
+    text-align: center;
+    outline: none;
+    flex-shrink: 0;
+}
+
+/* CONFIRM SECTION */
+.confirm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(15, 92, 63, 0.3), rgba(10, 20, 16, 0.5));
+    border-radius: 16px;
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.confirm p {
+    color: #c9a959;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.confirm h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #f4ead8;
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.confirm small {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+}
+
+.confirm button {
+    background: linear-gradient(135deg, #c9a959, #0f5c3f);
+    color: #0a1410;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.confirm button:hover {
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: rgba(244, 234, 216, 0.4);
+    font-size: 13px;
+    border-top: 1px solid rgba(201, 169, 89, 0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+
+    .header {
+        padding: 20px 25px;
+    }
+
+    .reservation-page {
+        padding: 50px 20px 70px;
+    }
+
+    .page-heading h1 {
+        font-size: 32px;
+    }
+
+    .input-grid,
+    .choice-grid,
+    .occasion-grid,
+    .table-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .confirm {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .confirm button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .input-grid,
+    .choice-grid,
+    .occasion-grid,
+    .table-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food {
+        flex-wrap: wrap;
+    }
+}
+
+.food-category {
+    color: #d89b3c;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    margin: 20px 0 10px;
+}
+
+.food-category:first-child {
+    margin-top: 0;
+}
+
+.food-desc {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.total-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding: 16px 20px;
+    background: rgba(216, 155, 60, 0.12);
+    border: 1px solid rgba(216, 155, 60, 0.4);
+    border-radius: 10px;
+}
+
+.total-box span:first-child {
+    color: #c9a959;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.total-box span:last-child {
+    color: #d89b3c;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.total-line {
+    color: #d89b3c;
+    font-size: 16px;
+}

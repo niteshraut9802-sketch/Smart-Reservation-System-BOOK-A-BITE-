@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0a1410;
+    min-height: 100vh;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 70px;
+    border-bottom: 1px solid rgba(201, 169, 89, 0.2);
+    background: #0d1f18;
+}
+
+.logo {
+    font-size: 26px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: #c9a959;
+}
+
+.logo span { color: #d89b3c; }
+
+.back-btn {
+    color: #f4ead8;
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid rgba(216, 155, 60, 0.4);
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(216, 155, 60, 0.15);
+    border-color: #d89b3c;
+}
+
+.rewards-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 30px 100px;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.page-heading p {
+    color: #c9a959;
+    letter-spacing: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.page-heading h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 46px;
+    color: #f4ead8;
+    margin-bottom: 14px;
+}
+
+.page-heading span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 17px;
+}
+
+/* MEMBER BANNER */
+.member-banner {
+    background: linear-gradient(135deg, rgba(15, 92, 63, 0.3), rgba(10, 20, 16, 0.5));
+    border: 1px solid rgba(201, 169, 89, 0.25);
+    border-radius: 14px;
+    padding: 26px 32px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.member-banner p {
+    color: #f4ead8;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.member-banner small {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.member-banner.guest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.member-banner.guest p {
+    margin-bottom: 0;
+}
+
+/* TIERS */
+.tiers-section {
+    margin-bottom: 60px;
+}
+
+.tiers-section h2,
+.how-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #d89b3c;
+    font-size: 28px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.tier-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tier-card {
+    background: rgba(15, 92, 63, 0.14);
+    border: 1px solid rgba(201, 169, 89, 0.25);
+    border-radius: 14px;
+    padding: 26px 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.tier-card:hover {
+    border-color: rgba(201, 169, 89, 0.55);
+    transform: translateY(-3px);
+}
+
+.tier-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #f4ead8;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.tier-points {
+    color: #c9a959;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.tier-perk {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* HOW IT WORKS */
+.how-section {
+    margin-bottom: 60px;
+}
+
+.how-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.how-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: rgba(15, 92, 63, 0.1);
+    border: 1px solid rgba(201, 169, 89, 0.18);
+    border-radius: 12px;
+    padding: 18px 24px;
+}
+
+.how-number {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(216, 155, 60, 0.2);
+    color: #d89b3c;
+    font-weight: 600;
+    border-radius: 50%;
+}
+
+.how-item p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+}
+
+/* CTA */
+.rewards-cta {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, rgba(15, 92, 63, 0.3), rgba(10, 20, 16, 0.5));
+    border-radius: 16px;
+}
+
+.rewards-cta p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: #d89b3c;
+    color: black;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary-btn:hover { transform: translateY(-2px); }
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: rgba(244, 234, 216, 0.4);
+    font-size: 13px;
+    border-top: 1px solid rgba(201, 169, 89, 0.1);
+}
+
+@media (max-width: 700px) {
+    .header { padding: 20px 25px; }
+    .rewards-page { padding: 50px 20px 70px; }
+    .page-heading h1 { font-size: 32px; }
+    .tier-grid { grid-template-columns: 1fr 1fr; }
+    .member-banner.guest {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+.points-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin: 14px 0;
+}
+
+.points-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: #d89b3c;
+    font-weight: 700;
+}
+
+.points-label {
+    color: #c9a959;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.current-tier-badge {
+    display: inline-block;
+    background: rgba(216, 155, 60, 0.15);
+    border: 1px solid rgba(216, 155, 60, 0.4);
+    color: #f4ead8;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.tier-card {
+    position: relative;
+}
+
+.tier-card.active-tier {
+    border-color: #d89b3c;
+    background: rgba(216, 155, 60, 0.15);
+}
+
+.current-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d89b3c;
+    color: #0a1410;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 10px;
+}
