@@ -13,33 +13,102 @@ body {
 
 
 /* =========================================================
-   LOGIN PAGE
+   LOGIN PAGE — SPLIT SCREEN
 ========================================================= */
 
-.container {
+.login-screen {
     min-height: 100vh;
-
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
 
-    padding: 30px;
+.login-visual {
+    flex: 1;
+    position: relative;
+    background-image: url('../image/restaurant background.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+}
+
+.login-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 20, 16, 0.3), rgba(10, 20, 16, 0.85));
+}
+
+.login-visual-content {
+    position: relative;
+    z-index: 1;
+    color: #f4ead8;
+}
+
+.login-visual-content .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: #d89b3c;
+    margin-bottom: 14px;
+}
+
+.login-visual-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.login-visual-content p {
+    color: rgba(244, 234, 216, 0.75);
+    font-size: 15px;
+    max-width: 380px;
+    line-height: 1.6;
+}
+
+.login-form-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: #0a1410;
 }
 
 .login-box {
-    width: 400px;
-
-    padding: 40px;
-
-    background: rgba(13, 31, 24, 0.9);
-
-    border: 1px solid rgba(201, 169, 89, 0.35);
-
-    border-radius: 20px;
-
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
     text-align: center;
+    animation: fadeInUp 0.5s ease;
+}
 
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, rgba(216, 155, 60, 0.2), rgba(15, 92, 63, 0.2));
+    border: 1px solid rgba(216, 155, 60, 0.4);
+    border-radius: 50%;
+
+    font-size: 26px;
+    color: #d89b3c;
 }
 
 .login-box h1 {
@@ -55,7 +124,7 @@ body {
 .subtitle {
     color: #c9a959;
 
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     font-size: 14px;
 }
@@ -65,35 +134,65 @@ body {
 
     flex-direction: column;
 
-    gap: 14px;
+    gap: 15px;
+}
+
+.login-box .input-group {
+    position: relative;
+    text-align: left;
 }
 
 .login-box input {
-    padding: 14px;
+    width: 100%;
 
-    border-radius: 10px;
+    padding: 15px 16px 15px 44px;
+
+    border-radius: 12px;
 
     border: 1px solid rgba(201, 169, 89, 0.25);
 
-    background: #0a1410;
+    background: #0d1f18;
 
     color: #f4ead8;
 
     outline: none;
 
     font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.login-box input::placeholder {
+    color: #77827c;
 }
 
 .login-box input:focus {
     border-color: #d89b3c;
+    box-shadow: 0 0 0 3px rgba(216, 155, 60, 0.12);
+}
+
+.login-box .input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #77827c;
+    font-size: 16px;
+
+    pointer-events: none;
+}
+
+.login-box input:focus ~ .input-icon {
+    color: #d89b3c;
 }
 
 .login-box button {
-    padding: 14px;
+    padding: 15px;
 
     border: none;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     background: linear-gradient(
         135deg,
@@ -108,10 +207,19 @@ body {
     cursor: pointer;
 
     transition: 0.3s;
+
+    margin-top: 4px;
 }
 
 .login-box button:hover {
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(216, 155, 60, 0.25);
+}
+
+@media (max-width: 900px) {
+    .login-visual {
+        display: none;
+    }
 }
 
 
@@ -779,4 +887,4 @@ body {
         border-radius: 10px;
     }
 
-}   
+}

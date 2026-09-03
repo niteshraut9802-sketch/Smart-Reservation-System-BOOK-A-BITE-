@@ -1,4 +1,4 @@
-    <?php
+<?php
 session_start();
 include "../Backend/db.php";
 
@@ -42,23 +42,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-    <div class="container">
-        <div class="login-box">
+    <div class="login-screen">
 
-            <h1>Admin Panel</h1>
-            <p class="subtitle">Book a Bite — Management Console</p>
-
-            <?php if ($error): ?>
-                <p class="error-message"><?php echo htmlspecialchars($error); ?></p>
-            <?php endif; ?>
-
-            <form method="POST" action="login.php">
-                <input type="email" name="email" placeholder="Admin Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
-
+        <div class="login-visual">
+            <div class="login-visual-content">
+                <div class="brand">✦ Book a Bite</div>
+                <h2>Manage Every Detail<br>of Your Restaurant</h2>
+                <p>Reservations, menu items, and guests — all in one place, built for the people who run the show.</p>
+            </div>
         </div>
+
+        <div class="login-form-side">
+            <div class="login-box">
+
+                <div class="admin-icon">🔐</div>
+
+                <h1>Admin Panel</h1>
+                <p class="subtitle">Book a Bite — Management Console</p>
+
+                <?php if ($error): ?>
+                    <p class="error-message"><?php echo htmlspecialchars($error); ?></p>
+                <?php endif; ?>
+
+                <form method="POST" action="login.php">
+
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Admin Email" required>
+                        <span class="input-icon">✉</span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                        <span class="input-icon">🔒</span>
+                    </div>
+
+                    <button type="submit">Login</button>
+
+                </form>
+
+            </div>
+        </div>
+
     </div>
 
 </body>

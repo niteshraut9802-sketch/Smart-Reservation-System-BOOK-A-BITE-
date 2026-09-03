@@ -5,8 +5,8 @@ session_start();
 $restaurant = [
     'name'    => 'Book a Bite',
     'tagline' => 'MICHELIN RECOMMENDED • SINCE 2009',
-    'address' => '48th Floor, Skyline Tower, Downtown',
-    'phone'   => '(555) 123-4567',
+    'address' => 'Jhamsikhel, Lalitpur, Patan',
+    'phone'   => '+977 1-552-4830',
     'hours'   => [
         'Mon – Thu' => '5:00 PM – 11:00 PM',
         'Fri – Sat' => '5:00 PM – 1:00 AM',
@@ -153,9 +153,9 @@ $full_name    = $_SESSION['full_name'] ?? '';
             <p class="section-label">Our Story</p>
             <h2>A Rooftop Escape Above the City</h2>
             <p>
-                Perched on the 48th floor, Book a Bite has served intimate dinners
+                Perched above the streets of Patan, Book a Bite has served intimate dinners
                 and unforgettable celebrations since 2009. Our kitchen blends
-                seasonal, locally-sourced ingredients with skyline views that
+                seasonal, locally-sourced ingredients with views that
                 change with every sunset — from candlelit indoor tables to our
                 open-air garden terrace and rooftop deck.
             </p>
@@ -233,7 +233,7 @@ $full_name    = $_SESSION['full_name'] ?? '';
                     <span class="icon">✦</span>
                     <?php echo $restaurant['name']; ?>
                 </div>
-                <p>Fine dining above the city skyline since 2009.</p>
+                <p>Fine dining in the heart of Patan since 2009.</p>
             </div>
 
             <div class="footer-col">
@@ -245,9 +245,9 @@ $full_name    = $_SESSION['full_name'] ?? '';
 
             <div class="footer-col">
                 <h4>Follow</h4>
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
+                <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer">Twitter</a>
             </div>
 
             <div class="footer-col">
